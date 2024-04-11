@@ -5,7 +5,17 @@ console.log('***** Cart Functions *****');
 
 
 
+let basket = [];
 
+function addItem(item) {
+
+    basket.push(item);
+    return true;
+}
+
+addItem('first item');
+
+console.log(basket);
 
 
 
