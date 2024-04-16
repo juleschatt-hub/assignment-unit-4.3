@@ -13,11 +13,41 @@ function addItem(item) {
     return true;
 }
 
-addItem('first item');
+addItem('pizza');
+addItem('car');
+addItem('scrambled eggs');
+addItem('toothbrush');
+//addItem(['firstItem', 'second item', 'third item'])
 
-console.log(basket);
+
+console.log('items in basket array', basket);
 
 
+function listItems() {
+    console.log('Items of basket array listed:')
+    let itemNum = 1;
+    for(let item of basket) {    
+        console.log('Item' + itemNum + ':', item);
+        itemNum += 1;
+    }
+}
+
+listItems();
+
+
+// function empty(basket) {
+//     for(let item of basket){
+//         basket.pop();
+//     }
+//  }
+ //end empty
+
+function empty() {
+    basket.length = 0;
+}
+empty();
+
+console.log('after empty', basket)
 
 
 
