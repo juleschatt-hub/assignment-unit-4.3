@@ -2,9 +2,6 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
-
-
-
 let basket = [];
 
 function addItem(item) {
@@ -12,6 +9,8 @@ function addItem(item) {
     basket.push(item);
     return true;
 }
+
+console.log('addItem() returns:', addItem('return true test item')); //test for add item returning true
 
 addItem('pizza');
 addItem('car');
@@ -26,13 +25,15 @@ console.log('items in basket array', basket);
 function listItems() {
     console.log('Items of basket array listed:')
     let itemNum = 1;
-    for(let item of basket) {    
+    for (let item of basket) {
         console.log('Item' + itemNum + ':', item);
         itemNum += 1;
     }
 }
 
-listItems();
+listItems(); 
+//test for list times is the logging that happens 
+//within the loop of the function
 
 
 // function empty(basket) {
@@ -40,14 +41,14 @@ listItems();
 //         basket.pop();
 //     }
 //  }
- //end empty
+//end empty
 
 function empty() {
     basket.length = 0;
 }
 empty();
 
-console.log('after empty', basket)
+console.log('after empty', basket) //test for empty()
 
 
 
@@ -64,6 +65,6 @@ try {
         isFull: typeof isFull !== 'undefined' ? isFull : undefined,
         removeItem: typeof removeItem !== 'undefined' ? removeItem : undefined,
     };
-} catch(e) {
+} catch (e) {
     // Do nothing
 }
